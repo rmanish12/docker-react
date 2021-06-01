@@ -1,0 +1,11 @@
+language: generic
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t rmanish/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true rmanish/docker-react npm run test
+  # - docker run rmanish/docker-react npm run test -- --coverage
