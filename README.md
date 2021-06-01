@@ -2,6 +2,25 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Building docker image with Dockerfile.dev
+```
+docker build -f Dockerfile.dev .
+```
+
+## Running this docker image
+```
+docker run -it -p 3000:3000 <image-id>
+```
+
+## Build docker image for production
+```
+docker build .
+```
+
+## Run docker production image by starting nginx
+```
+docker run -p 8080:80 <image-id>
+```
 ## Available Scripts
 
 In the project directory, you can run:
